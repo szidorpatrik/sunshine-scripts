@@ -9,14 +9,14 @@ The scripts automatically match the host's virtual monitor resolution and refres
 ## Features
 
 * **Dynamic Resolution & FPS Matching:** Uses Sunshine environment variables (`SUNSHINE_CLIENT_WIDTH`, `SUNSHINE_CLIENT_HEIGHT`, `SUNSHINE_CLIENT_FPS`) to spin up an exact display match.
-* **Automated Physical Monitor Toggling:** Disables physical monitors on connection and re-enables them on disconnection via a multi-line `kscreen-doctor` parser.
+* **Automated Physical Monitor Toggling:** Disables physical monitors on connection and re-enables them on disconnection.
 
 ---
 
 ## Prerequisites
 
 * CachyOS (KDE Plasma Wayland)
-* Packages: `krfb`, `kscreen`, `sunshine`
+* Packages: `krfb`, `kscreen`, `sunshine`, `jq`
 * (Optional) HDMI dummy plug for headless mode
 
 ---
@@ -26,7 +26,7 @@ The scripts automatically match the host's virtual monitor resolution and refres
 ### 1. Install Dependencies
 
 ```bash
-sudo pacman -S krfb kscreen sunshine
+sudo pacman -S krfb kscreen sunshine jq
 ```
 
 ### 2. Clone the repository
